@@ -7,7 +7,7 @@ export default function ProfileChild() {
 
   return (
     <div>
-      <p>Hello {name}, I am child of Profile</p>
+      <p>Hello {name}, I am a child of Profile</p>
     </div>
   );
 }

@@ -17,7 +17,7 @@ function App() {
   // State
   return (
     <UserContext.Provider value={userData}>
-      {/* component => child => granchild */}
+      {/* component => child => grandchild */}
       <Header />
       <Profile />
     </UserContext.Provider>
