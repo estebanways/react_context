@@ -1,26 +1,18 @@
 import './App.css';
-import { useState } from 'react';
 import Header from './components/Header';
 import Profile from './components/Profile';
-import UserContext from './components/user.context';
+import Todos from './components/todos/Todos';
+import UserContextProvider from './providers/UserContextProvider';
 
 function App() {
-  // This can be put outside in another
-  // functon so it looks better
-  const [user, setUser] = useState(null);
-  const userData = {
-    user: [user, setUser],
-  }
 
-  // 'GET' to an API that returns the user values
-
-  // State
   return (
-    <UserContext.Provider value={userData}>
-      {/* component => child => grandchild */}
-      <Header />
-      <Profile />
-    </UserContext.Provider>
+
+    <UserContextProvider>
+      <Header/>
+      <Profile/>
+      <Todos/>
+    </UserContextProvider>
   );
 }
 
